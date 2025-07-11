@@ -1,0 +1,73 @@
+body {
+    font-family: Arial, sans-serif;
+    background: #222;
+    color: #eee;
+    text-align: center;
+}
+
+.game-container {
+    margin: 20px auto;
+    width: fit-content;
+}
+
+.field {
+    display: grid;
+    grid-template-columns: repeat(40, 20px);
+    grid-template-rows: repeat(24, 20px);
+    gap: 1px;
+    background: #444;
+    border: 2px solid #555;
+}
+
+.tile {
+    width: 20px;
+    height: 20px;
+    background: #333;
+    position: relative;
+}
+
+.wall {
+    background: #555;
+}
+
+.floor {
+    background: #333;
+}
+
+.hero {
+    background: #4CAF50;
+    border-radius: 50%;
+}
+
+.enemy {
+    background: #F44336;
+    border-radius: 50%;
+}
+
+.sword {
+    background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="%23FFC107"><path d="M6.92 5H5l9 9 1-.94m-3.54-1.06L5 17l1.39 1.39L11.92 13l1.42 1.42 1.42-1.42-1.42-1.42 1.42-1.42-1.42-1.42-1.42 1.42-1.42-1.42z"/></svg>') center/cover;
+}
+
+.potion {
+    background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="%23E91E63"><path d="M19 19H5V5h14m0-2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2z"/></svg>') center/cover;
+}
+
+.health {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 2px;
+    background: #4CAF50;
+    transition: width 0.3s;
+}
+
+.stats {
+    margin: 10px 0;
+    font-size: 18px;
+}
+
+.message {
+    margin: 10px 0;
+    min-height: 24px;
+    color: #FFC107;
+}
